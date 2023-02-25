@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments::head}"></head>
+<head th:replace="~{fragments::head(title=|${product.name} w Skleppiku|)}"></head>
 <body>
 <header th:replace="~{fragments::header}"></header>
 <main>
