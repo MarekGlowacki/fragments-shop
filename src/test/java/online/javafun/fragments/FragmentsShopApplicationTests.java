@@ -8,3 +8,6 @@ class FragmentsShopApplicationTests {
 
     @Test
     void contextLoads() {
+    }
+
+}
