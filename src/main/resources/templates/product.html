@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="pl" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments::head(title=|${product.name} w Skleppiku|)}"></head>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+  <title th:text="${product.name}">Telewizor - Skleppik</title>
+</head>
 <body>
-<header th:replace="~{fragments::header}"></header>
-<main>
+<main layout:fragment="content">
   <h2>Informacje o produkcie</h2>
   <p th:text="|Nazwa: ${product.name}|">Nazwa: Telewizor</p>
   <p>
@@ -14,6 +17,5 @@
     Opis: Znakomity telewizor Oled z dźwiękiem przestrzennym i niesamowitymi kolorami
   </p>
 </main>
-<footer th:replace="~{fragments::footer}"></footer>
 </body>
 </html>
